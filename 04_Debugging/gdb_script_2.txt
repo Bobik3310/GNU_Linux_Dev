@@ -1,0 +1,18 @@
+set pagination off
+set $seq_indx=1
+
+break 41 if ($seq_indx >= 28) && ($seq_indx <= 35)
+break 41
+
+command 1
+	printf "@@@ %d %d %d %d", M, N, S, i
+end
+
+# Почему меняем переменную отдельно?
+command 2
+	set $seq_indx = $seq_indx + 1
+	continue
+end
+
+run -100 100 3 > /dev/null
+quit
