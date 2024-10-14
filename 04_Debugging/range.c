@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
   } else if (argc == 2) {
     // parse
     N = (long)strtol(argv[1], &endptr, BASE);
-	S = 1;
+    S = 1;
 
     // print
     for (i = 0; i < N; ++i) {
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     // parse
     M = (long)strtol(argv[1], &endptr, BASE);
     N = (long)strtol(argv[2], &endptr, BASE);
-	S = 1;
+    S = 1;
 
     // print
     for (i = M; i < N; ++i) {
