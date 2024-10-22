@@ -28,7 +28,7 @@ void reg_subst(char *str, char *subst, regmatch_t bags[], char out[]) {
 
 	// analyse substitution string
 	indx_buf = indx_subst = 0;
-	while (indx_subst < len_subst) {
+	while (indx_subst < len_subst && indx_buf < MAX_STRING_LEN) {
 		if (subst[indx_subst] == '\\') {
 			if (isdigit(subst[indx_subst + 1])) { // \[bag_num]
 				num_bag = subst[indx_subst + 1] - '0';
