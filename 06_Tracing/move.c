@@ -19,7 +19,7 @@ void check_errno(char *func, FILE *in, FILE *out, char *path_out, char *error_me
 {
 	if (errno != 0) {
 		if (error_message != NULL) {
-			printf("%s", error_message);
+			fprintf(stderr, "%s", error_message);
 		} else { 
 			perror(func);
 		}
